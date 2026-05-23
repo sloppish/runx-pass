@@ -10,8 +10,8 @@ Fuzzy-search your password store entries, type or copy passwords and OTP codes, 
 |------------------------|-----------------------------------------------|
 | `pass`                 | Search and type a password                    |
 | `pass-copy`            | Search and copy a password to clipboard       |
-| `otp`                  | Search and type an OTP code                   |
-| `otp-copy`             | Search and copy an OTP code to clipboard      |
+| `pass-otp`             | Search and type an OTP code                   |
+| `pass-otp-copy`        | Search and copy an OTP code to clipboard      |
 | `pass-gen <args>`      | Generate a new password and type it           |
 | `pass-gen-copy <args>` | Generate a new password and copy to clipboard |
 
@@ -23,6 +23,19 @@ Fuzzy-search your password store entries, type or copy passwords and OTP codes, 
 |----------------|---------------------|---------------------------------------------|
 | `store_dir`    | `~/.password-store` | Path to the password store                  |
 | `result_limit` | `12`                | Maximum number of fuzzy-match results shown |
+
+## Aliases
+
+You can define aliases for commands in your Runx plugin config, for example:
+
+```toml
+[plugin.pass.aliases]
+pass = "p"
+pass-otp = "otp"
+# ...
+```
+
+This lets you type `p gmail` instead of `pass gmail`, etc.
 
 ## Requirements
 
