@@ -17,7 +17,7 @@ end
 
 local function password_store_dir()
   local config = runx.plugin_config or {}
-  local dir = config.store_dir or runx.getenv("PASSWORD_STORE_DIR")
+  local dir = config.store_dir
   if dir and dir ~= "" then
     return dir
   end
@@ -140,7 +140,7 @@ return {
   badge = "PASS",
 
   commands = {
-    pass = "search_type_password",
+    ["pass"] = "search_type_password",
     ["pass-copy"] = "search_copy_password",
     ["pass-otp"] = "search_type_otp",
     ["pass-otp-copy"] = "search_copy_otp",
